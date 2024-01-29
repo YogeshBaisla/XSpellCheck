@@ -25,7 +25,7 @@ export default function App() {
     const firstCorrection = correctedWords.find((el, idx) => {
       return el !== words[idx];
     });
-    setSuggestions(firstCorrection || " ");
+    setSuggestions(firstCorrection || "");
   };
   return (
     <div>
@@ -37,7 +37,7 @@ export default function App() {
         rows={5}
         cols={40}
       />
-      {suggestions && (
+      {suggestions !== "" && (
         <p>
           Did you mean: <strong>{suggestions}</strong>?
         </p>
